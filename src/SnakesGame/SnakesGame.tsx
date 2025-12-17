@@ -33,7 +33,7 @@ export default function SnakesGame() {
 
   return (
     <div id="snakes-game-container" onClick={handleBodyClick}>
-      <h1 id="game-title">Snake Game</h1>
+      <h1 id="game-title">Snake Game Environment Test</h1>
       <p className="high-score">High Score: {highScore}</p>
 
       {justStarted ? (
