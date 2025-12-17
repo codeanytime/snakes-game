@@ -33,11 +33,11 @@ export default function SnakesGame() {
 
   return (
     <div id="snakes-game-container" onClick={handleBodyClick}>
-      <h1 id="game-title">Snake Game Environment Test</h1>
+      <h1 id="game-title">Snake Game Application</h1>
       <p className="high-score">High Score: {highScore}</p>
 
       {justStarted ? (
-        <p className="new-game-hint">Click anywhere to start</p>
+        <p className="new-game-hint">Start game</p>
       ) : (
         <>
           <p className="score">
