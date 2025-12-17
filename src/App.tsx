@@ -1,6 +1,12 @@
 import SnakesGame from "./SnakesGame";
 import { AwsRum, AwsRumConfig } from 'aws-rum-web';
 
+declare global {
+    interface Window {
+        awsRum?: AwsRum;
+    }
+}
+
 try {
     const config: AwsRumConfig = {
         sessionSampleRate: 1 ,
@@ -16,12 +22,15 @@ try {
     const APPLICATION_VERSION: string = '1.0.0';
     const APPLICATION_REGION: string = 'ap-southeast-1';
 
-    const _awsRum: AwsRum = new AwsRum(
+    const awsRum: AwsRum = new AwsRum(
         APPLICATION_ID,
         APPLICATION_VERSION,
         APPLICATION_REGION,
         config
     );
+
+    // mark as used
+    window.awsRum = awsRum;
 } catch (error) {
     // Ignore errors thrown during CloudWatch RUM web client initialization
 }
