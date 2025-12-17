@@ -16,7 +16,7 @@ try {
     const APPLICATION_VERSION: string = '1.0.0';
     const APPLICATION_REGION: string = 'ap-southeast-1';
 
-    const awsRum: AwsRum = new AwsRum(
+    const _awsRum: AwsRum = new AwsRum(
         APPLICATION_ID,
         APPLICATION_VERSION,
         APPLICATION_REGION,
